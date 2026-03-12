@@ -6,7 +6,6 @@ import img4 from "figma:asset/3909e889923feb8671582512eaf37e5941aeedae.png";
 import img5 from "figma:asset/84b5f677a654927100900183d233890e358b8c28.png";
 import img6 from "figma:asset/1a8dc02fba8c6d740712e9b857b8b7ca6698173e.png";
 import img7 from "figma:asset/a8b7b86aa5134cf4064b461c4dcfee7891c2ad46.png";
-import img8 from "figma:asset/58d2eb84b5fa40e85ddd1f83c9a6676a18781002.png";
 import img9 from "figma:asset/0c3aaf29e29094afd46aa7efb5e18a12a8adf35f.png";
 import img10 from "figma:asset/9384826a504bb2ec5339e47f1367bde4c1141acc.png";
 import { X } from "lucide-react";
@@ -51,11 +50,6 @@ export function Portfolio() {
       category: "Wedding"
     },
     {
-      src: img8,
-      alt: "Corporate Presentation",
-      category: "Corporate"
-    },
-    {
       src: img9,
       alt: "Corporate Event",
       category: "Corporate"
@@ -89,7 +83,9 @@ export function Portfolio() {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${
+                  index === 4 ? 'object-top' : ''
+                }`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-6">
